@@ -21,6 +21,7 @@ public class ConfigResource {
 	public @ResponseBody Properties getConfig () throws Exception {
 		Properties prop = new Properties();
 		prop.put("azure", "user");
+		prop.put("azure1", "user1");
 		return prop;
 	}
 	
