@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
 @EnableAutoConfiguration
 @ImportResource("classpath:data-context.xml")
 @PropertySource(value = "classpath:SpringBootToWar.properties")
-@EnableEurekaClient
+//@EnableEurekaClient
 public class SpringBootWarApplication {
 
     public static void main(String[] args) {
