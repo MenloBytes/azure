@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.equilar.cub" />
+
+<!-- 	<bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator" />
+	<context:property-placeholder location="classpath*:*application.properties" />
+	<bean id="platformDataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+		<property name="initialSize" value="10" />
+		<property name="maxActive" value="50" />
+		<property name="maxIdle" value="50" />
+		<property name="minIdle" value="5" />
+		<property name="testOnBorrow" value="true" />
+		<property name="validationQuery" value="select 1" />
+	</bean>
+
+	<bean id="platformEntityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="packagesToScan" value="com.equilar.cub.bo" />
+		mappingResources for Named Queries
+		<property name="mappingResources">
+			<list>
+				<value>queries/Person.xml</value>
+				<value>queries/Workflow.xml</value>
+				<value>queries/User.xml</value>
+				<value>queries/Lookup.xml</value>
+				<value>queries/Organization.xml</value>
+				<value>queries/Report.xml</value>
+				<value>queries/Extractor.xml</value>
+				<value>queries/PersonProduct.xml</value>
+				<value>queries/PersonRules.xml</value>
+				<value>queries/PersonTitleTextCleanUp.xml</value>
+			</list>
+		</property>
+		<property name="dataSource" ref="platformDataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="false" />
+				<property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean primary="true" id="platformTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="platformEntityManagerFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="platformTransactionManager" />
+
+    <aop:aspectj-autoproxy/> -->
+
+</beans>
