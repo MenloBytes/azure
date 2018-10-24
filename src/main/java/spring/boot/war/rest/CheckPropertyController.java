@@ -24,4 +24,5 @@ public class CheckPropertyController {
 		
 		return bootWarProperty.toString();
 	}
+	
 }
